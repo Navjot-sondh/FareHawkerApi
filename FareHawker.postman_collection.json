@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "07fbdb58-21fc-4a62-a678-9468be077f39",
+		"name": "FareHawker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "61020124-ed04-4f76-8d09-0427a8452c3b",
+			"name": "http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"EndUserIp\":\"216.10.251.69\",\"TokenId\":\"d472ba45-6a7f-479b-a41b-6abeac6923ea\",\"AdultCount\":\"1\",\"ChildCount\":0,\"InfantCount\":0,\"DirectFlight\":\"false\",\"OneStopFlight\":\"false\",\"JourneyType\":\"1\",\"PreferredAirlines\":null,\"Segments\":[{\"Origin\":\"DEL\",\"Destination\":\"VNS\",\"FlightCabinClass\":\"2\",\"PreferredDepartureTime\":\"2018-08-06T00:00:00\"}]}    \t"
+				},
+				"url": {
+					"raw": "http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search/",
+					"protocol": "http",
+					"host": [
+						"api",
+						"tektravels",
+						"com"
+					],
+					"path": [
+						"BookingEngineService_Air",
+						"AirService.svc",
+						"rest",
+						"Search",
+						""
+					]
+				},
+				"description": "Test Api to search One Way Flight"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "29ee6db5-e393-4962-8505-7fa9e0f173b2",
+			"name": "http://api.tektravels.com/SharedServices/SharedData.svc/rest/Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ClientId\": \"ApiIntegrationNew\",\r\n\"UserName\": \"hawker\",\r\n\"Password\": \"hawker@123\",\r\n\"EndUserIp\": \"216.10.251.69\"\r\n} "
+				},
+				"url": {
+					"raw": "http://api.tektravels.com/SharedServices/SharedData.svc/rest/Authenticate",
+					"protocol": "http",
+					"host": [
+						"api",
+						"tektravels",
+						"com"
+					],
+					"path": [
+						"SharedServices",
+						"SharedData.svc",
+						"rest",
+						"Authenticate"
+					]
+				},
+				"description": "Token ID api"
+			},
+			"response": []
+		}
+	]
+}
